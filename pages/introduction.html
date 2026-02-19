@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction - Vendo Pharmacy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/custom.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-red': '#D94A5C',
+                        'hover-red': '#C63D4D',
+                        'teal': '#5CBDB9',
+                        'bg-main': '#EBF6F5',
+                        'bg-highlight': '#FBE3E8',
+                        'text-primary': '#1F2937',
+                        'text-secondary': '#6B7280',
+                        'text-muted': '#9CA3AF',
+                        'border-gray': '#E5E7EB',
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-bg-main text-text-primary">
+    
+    <!-- Navigation Bar (Same as Home) -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="w-full px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="../index.html" class="flex items-center">
+                        <img src="../logo.png" alt="Vendo Pharmacy Logo" class="w-10 h-10 object-contain">
+                        <span class="ml-2 text-xl font-bold text-text-primary">Vendo Pharmacy</span>
+                    </a>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html" class="text-text-secondary hover:text-teal">Home</a>
+                    
+                    <!-- Introduction Dropdown -->
+                    <div class="dropdown relative">
+                        <button class="dropdown-button text-text-primary hover:text-teal font-medium flex items-center">
+                            About Us
+                            <svg class="ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu hidden absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2">
+                            <a href="introduction.html" class="block px-4 py-2 text-text-secondary hover:bg-bg-main hover:text-teal">Overview</a>
+                            <a href="introduction.html#partnerships" class="block px-4 py-2 text-text-secondary hover:bg-bg-main hover:text-teal">Our Partnership</a>
+                            <a href="introduction.html#growth" class="block px-4 py-2 text-text-secondary hover:bg-bg-main hover:text-teal">Growth Plan</a>
+                        </div>
+                    </div>
+                    
+                    <div class="dropdown relative">
+                        <button class="dropdown-button text-text-secondary hover:text-teal font-medium flex items-center">
+                            Services
+                            <svg class="ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu hidden absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-lg py-2">
+                            <a href="business-model.html#overview" class="block px-4 py-2 text-text-secondary hover:bg-bg-main hover:text-teal">Overview</a>
+                            <a href="business-model.html#value-proposition" class="block px-4 py-2 text-text-secondary hover:bg-bg-main hover:text-teal">Our Promise To You</a>
+                            <a href="business-model.html#strategies" class="block px-4 py-2 text-text-secondary hover:bg-bg-main hover:text-teal">Strategies & Operation</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown relative">
+                        <button class="dropdown-button text-text-secondary hover:text-teal font-medium flex items-center">
+                            Price & Promotion
+                            <svg class="ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu hidden absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2">
+                            <a href="marketing.html#price" class="block px-4 py-2 text-text-secondary hover:bg-bg-main hover:text-teal">Price</a>
+                            <a href="marketing.html#promotion" class="block px-4 py-2 text-text-secondary hover:bg-bg-main hover:text-teal">Promotion</a>
+                        </div>
+                    </div>
+                    
+                    <a href="swot.html" class="text-text-secondary hover:text-teal">SWOT Analysis</a>
+                    <a href="pirate-funnel.html" class="text-text-secondary hover:text-teal">Pirate Funnel</a>
+                    
+
+                    
+                    <a href="testimonials.html" class="text-text-secondary hover:text-teal">Testimonials</a>
+                    
+                    <!-- Reflection Dropdown -->
+                    <div class="dropdown relative">
+                        <button class="dropdown-button text-text-secondary hover:text-teal font-medium flex items-center">
+                            Reflection
+                            <svg class="ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu hidden absolute left-0 mt-2 w-40 bg-white rounded-lg shadow-lg py-2">
+                            <a href="reflection.html#yuhao" class="block px-4 py-2 text-text-secondary hover:bg-bg-main hover:text-teal">Yuhao</a>
+                            <a href="reflection.html#collin" class="block px-4 py-2 text-text-secondary hover:bg-bg-main hover:text-teal">Collin</a>
+                            <a href="reflection.html#olivia" class="block px-4 py-2 text-text-secondary hover:bg-bg-main hover:text-teal">Olivia</a>
+                            <a href="reflection.html#michelle" class="block px-4 py-2 text-text-secondary hover:bg-bg-main hover:text-teal">Michelle</a>
+                            <a href="reflection.html#references" class="block px-4 py-2 text-text-secondary hover:bg-bg-main hover:text-teal">References</a>
+                        </div>
+                    </div>
+                    
+                    <a href="vending-machine.html" class="bg-primary-red text-white px-4 py-2 rounded-lg hover:bg-hover-red font-medium ml-4">
+                        Products
+                    </a>
+                </div>
+                
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-text-secondary hover:text-teal">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="../index.html" class="block px-3 py-2 text-text-secondary hover:bg-bg-main">Home</a>
+                <a href="introduction.html" class="block px-3 py-2 text-text-primary hover:bg-bg-main">Introduction</a>
+                <a href="business-model.html" class="block px-3 py-2 text-text-secondary hover:bg-bg-main">Business Model</a>
+                <a href="swot.html" class="block px-3 py-2 text-text-secondary hover:bg-bg-main">SWOT Analysis</a>
+                <a href="pirate-funnel.html" class="block px-3 py-2 text-text-secondary hover:bg-bg-main">Pirate Funnel</a>
+                <a href="marketing.html" class="block px-3 py-2 text-text-secondary hover:bg-bg-main">Marketing Plan</a>
+                <a href="testimonials.html" class="block px-3 py-2 text-text-secondary hover:bg-bg-main">Testimonials</a>
+                <a href="reflection.html" class="block px-3 py-2 text-text-secondary hover:bg-bg-main">Reflection</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-bg-main to-white py-16">
+        <div class="w-full px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-5xl font-bold text-text-primary mb-6">
+                    About <span class="text-primary-red">Vendo Pharmacy</span>
+                </h1>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    An automated pharmacy vending solution providing round-the-clock access to essential medicines, 
+                    supported by tele-pharmacy counselling and secure identity verification
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is Vendo Pharmacy -->
+    <section class="py-16 bg-white">
+        <div class="w-full px-4 sm:px-6 lg:px-8">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-bold text-text-primary mb-12 text-center">What is Vendo Pharmacy?</h2>
+                
+                <div class="grid md:grid-cols-1 gap-12 items-center mb-16">
+                    <div>
+                        <div class="bg-gradient-to-br from-teal/5 to-primary-red/5 rounded-2xl p-8 border border-teal/20">
+                            <p class="text-lg text-text-secondary leading-relaxed mb-6">
+                                Vendo Pharmacy is an automated pharmacy vending solution that provides <span class="font-semibold text-teal">24/7 access to medicines</span>, supported by tele-pharmacy counselling and secure identity verification.
+                            </p>
+                            <p class="text-lg text-text-secondary leading-relaxed mb-6">
+                                Vendo Pharmacy is led by the pharmacy owner and supported by an in-house pharmacist who oversees governance, smart vending, lockers, and case escalation. A support team ensures compliance and process improvements, while delivery staff handle secure stock replenishment.
+                            </p>
+                            <p class="text-lg text-text-secondary leading-relaxed">
+                                To enhance continuity of care and patient trust, we partner with <span class="font-semibold text-primary-red">National University Hospital (NUH)</span> and <span class="font-semibold text-primary-red">Hyphens Pharma</span> to strengthen healthcare linkage and inventory support, ensuring safe, timely and reliable patient access to a dependable medication supply ecosystem.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Partnerships Section -->
+    <section id="partnerships" class="py-16 bg-bg-main">
+        <div class="w-full px-4 sm:px-6 lg:px-8">
+            <div class="max-w-6xl mx-auto">
+                <!-- Section Header -->
+                <div class="text-center mb-12">
+                    <div class="inline-block bg-gradient-to-r from-teal/10 to-primary-red/10 rounded-full px-6 py-2 mb-4">
+                        <span class="text-teal font-semibold text-sm">COLLABORATIONS</span>
+                    </div>
+                    <h2 class="text-4xl font-bold text-text-primary mb-4">Key Partnerships</h2>
+                    <p class="text-text-secondary max-w-2xl mx-auto">Strategic collaborations ensuring quality, safety, and reliability in medication access[6,7]</p>
+                </div>
+
+                <!-- Partnership Cards -->
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- National University Hospital Card -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                        <div class="bg-gradient-to-br from-teal/5 to-white p-8">
+                            <div class="flex items-center justify-center mb-6">
+                                <img src="../images/introduction-image/NUH.jpg" alt="National University Hospital Logo" class="h-24 object-contain">
+                            </div>
+                            <h3 class="text-2xl font-bold text-text-primary mb-3 text-center">National University Hospital (NUH)</h3>
+                            <div class="w-16 h-1 bg-teal mx-auto mb-6"></div>
+                            <div class="bg-white/80 backdrop-blur-sm rounded-xl p-6 border border-teal/20">
+                                <p class="text-sm font-semibold text-teal mb-2"></p>
+                                <p class="text-text-secondary leading-relaxed">
+                                    National University Hospital (NUH) supports VendoPharmacy by providing extensive pharmacist support to enable a safe and clinically governed pathway for Pharmacy-only (P) and prescription-only medications (POM) through counselling. This strengthens patient confidence that VendoPharmacy prioritises clinical standards, not just convenience.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hyphens Pharma Card -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                        <div class="bg-gradient-to-br from-primary-red/5 to-white p-8">
+                            <div class="flex items-center justify-center mb-6">
+                                <img src="../images/introduction-image/Hyphens.jpg" alt="Hyphens Pharma Logo" class="h-24 object-contain">
+                            </div>
+                            <h3 class="text-2xl font-bold text-text-primary mb-3 text-center">Hyphens Pharma</h3>
+                            <div class="w-16 h-1 bg-primary-red mx-auto mb-6"></div>
+                            <div class="bg-white/80 backdrop-blur-sm rounded-xl p-6 border border-primary-red/20">
+                                <p class="text-sm font-semibold text-primary-red mb-2"></p>
+                                <p class="text-text-secondary leading-relaxed">
+                                    Hyphens Pharma supports VendoPharmacy by ensuring a reliable and safe medication supply across our machines. This helps minimise stock-outs, reduce wastage, and maintain medication quality, so users can trust that what they receive is legitimate and properly managed.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-16 bg-white">
+        <div class="w-full px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-text-primary mb-4">How It Works</h2>
+                <h3 class="text-3xl text-text-primary mb-4">Purchasing a medication: Simple, secure, and convenient medication access in 4 easy steps</h3>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-8">
+
+
+                <div class="bg-white rounded-xl p-6 shadow-md text-center card-hover">
+                    <div class="w-16 h-16 bg-primary-red/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-primary-red">1</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-text-primary mb-2">Locate & Browse</h3>
+                    <p class="text-text-secondary text-sm">
+                        Find a nearby VendoPharmacy unit and browse available products on-screen. Tap to view details such as price, quantity, directions, and key warnings.
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 shadow-md text-center card-hover">
+                    <div class="w-16 h-16 bg-teal/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-teal">2</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-text-primary mb-2">Get Smart Guidance (VendAI)</h3>
+                    <p class="text-text-secondary text-sm">
+                        Unsure which medication is suitable? Answer a few quick questions and VendAI will guide you with personalised recommendations.
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 shadow-md text-center card-hover">
+                    <div class="w-16 h-16 bg-primary-red/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-primary-red">3</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-text-primary mb-2">Pharmacist Consultation & Safety Checks</h3>
+                    <p class="text-text-secondary text-sm">
+                        For Pharmacy-only (P) medicines, you’ll have a short consultation with our licensed pharmacist before purchase. We’ll assess your symptoms, review important health information, and complete safety checks to ensure the medicine is safe and suitable for you before dispensing.
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 shadow-md text-center card-hover">
+                    <div class="w-16 h-16 bg-teal/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-teal">4</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-text-primary mb-2">Pay & collect</h3>
+                    <p class="text-text-secondary text-sm">
+                        Complete payment and collect your medication. A dispensing record will be stored
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2 -->
+    <section class="py-16 bg-white">
+        <div class="w-full px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+    
+                <h3 class="text-3xl text-text-primary mb-4">Accessing a Secure Locker: Simple, secure, and convenient medication access in 4 easy steps</h3>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-8">
+
+
+                <div class="bg-white rounded-xl p-6 shadow-md text-center card-hover">
+                    <div class="w-16 h-16 bg-primary-red/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-primary-red">1</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-text-primary mb-2">Obtain Prescription</h3>
+                    <p class="text-text-secondary text-sm">
+                        Consult doctor from supporting partners and obtain a prescription. Select on Healthhub app preference for Vendopharmacy collection and state desired location.
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 shadow-md text-center card-hover">
+                    <div class="w-16 h-16 bg-teal/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-teal">2</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-text-primary mb-2">Verify Identity</h3>
+                    <p class="text-text-secondary text-sm">
+                        Use Singpass to verify your identity and access prescription medications securely. Caregivers may use the caregiver function in the healthhub app to collect medications on behalf of individuals.[5,9]
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 shadow-md text-center card-hover">
+                    <div class="w-16 h-16 bg-primary-red/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-primary-red">3</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-text-primary mb-2">Pharmacist consultation</h3>
+                    <p class="text-text-secondary text-sm">
+                        Pharmacist will perform adequate track and compulsory tele consultation to ensure safe medication use
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 shadow-md text-center card-hover">
+                    <div class="w-16 h-16 bg-teal/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-teal">4</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-text-primary mb-2">Pay & collect</h3>
+                    <p class="text-text-secondary text-sm">
+                        Complete payment and collect your medication. A dispensing record will be stored
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+            <!-- Revenue Model -->
+            <div class="max-w-6xl mx-auto mb-12">
+                <h3 class="text-2xl font-bold text-text-primary mb-8 text-center">Revenue Model</h3>
+                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                    <div class="bg-gradient-to-br from-white to-teal/5 rounded-xl p-6 border border-teal/20">
+                        <div class="flex items-start mb-4">
+                            <div class="w-10 h-10 bg-teal/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                                <svg class="w-5 h-5 text-teal" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-text-primary mb-2">Medication Sales</h4>
+                                <ul class="text-sm text-text-secondary space-y-1">
+                                    <li>• 24/7 sales of General Sale products including high-turnover OTC items and travel medication kits</li>
+                                    <li>• 24/7 Pharmacy-only product after Singpass verification and real-time tele-counselling.</li>
+                                    <li>• 24/7 Prescription-only locker collection after Singpass verification, valid e-prescription from NUH and real-time tele-counselling.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-white to-primary-red/5 rounded-xl p-6 border border-primary-red/20">
+                        <div class="flex items-start mb-4">
+                            <div class="w-10 h-10 bg-primary-red/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                                <svg class="w-5 h-5 text-primary-red" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-text-primary mb-2">Tele-Pharmacy & Consultation Fees</h4>
+                                <ul class="text-sm text-text-secondary space-y-1">
+                                    <li>• Patients purchasing P or POM items are charged a small professional fee for real-time video counselling with registered pharmacists</li>
+                                    <li>• Higher consultation fees can be applied during peak periods or extended hours, reflecting the value of reduced waiting time and accessibility</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-white to-teal/5 rounded-xl p-6 border border-teal/20">
+                        <div class="flex items-start mb-4">
+                            <div class="w-10 h-10 bg-teal/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                                <svg class="w-5 h-5 text-teal" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-text-primary mb-2">Commission-Based Partnership Model</h4>
+                                <ul class="text-sm text-text-secondary space-y-1">
+                                    <li>• Medications are supplied directly from Hyphens, with profits shared via a commission-based model, reducing procurement costs while scaling sales volume efficiently</li>
+                                    <li>• Acts as an extended dispensing arm for NUH, supporting patient medication collection, generating service and dispensing revenue</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-white to-primary-red/5 rounded-xl p-6 border border-primary-red/20">
+                        <div class="flex items-start mb-4">
+                            <div class="w-10 h-10 bg-primary-red/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                                <svg class="w-5 h-5 text-primary-red" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-text-primary mb-2">Value-Added Bundles & Upselling</h4>
+                                <ul class="text-sm text-text-secondary space-y-1">
+                                    <li>• AI-supported inventory analysis ensures fast-moving are prioritized, improving overall revenue per machine</li>
+                                    <li>• By recommending only clinically appropriate add-ons (with a clear “why”), patients are more likely to buy a complete self-care set in one transaction (e.g., ORS + antidiarrhoeal advice, thermometer + fever meds), which increases average basket size while staying ethical</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-white to-teal/5 rounded-xl p-6 border border-teal/20 ">
+                        <div class="flex items-start mb-4">
+                            <div class="w-10 h-10 bg-teal/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                                <svg class="w-5 h-5 text-teal" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-text-primary mb-2">AI-Driven Cost Efficiency & Wastage Reduction</h4>
+                                <ul class="text-sm text-text-secondary space-y-1">
+                                    <li>• AI-based demand forecasting optimises replenishment cycles and stock allocation, reducing overstocking and emergency restocking costs</li>
+                                    <li>• Smarter inventory rotation (e.g., FEFO) minimises medication expiry and wastage, protecting margins and improving overall profitability per machine</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-white to-primary-red/5 rounded-xl p-6 border border-primary-red/20">
+                        <div class="flex items-start mb-4">
+                            <div class="w-10 h-10 bg-primary-red/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                                <svg class="w-5 h-5 text-primary-red" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-text-primary mb-2">Higher Profitability via Lower Operating Cost (Margin Expansion)</h4>
+                                <ul class="text-sm text-text-secondary space-y-1">
+                                    <li>• Centralised pharmacist coverage + standardised workflows lets one team support many machines, reducing per-site manpower cost while maintaining professional oversight</li>
+                                    <li>• Remote monitoring + forecast-driven replenishment reduces downtime, emergency restocking, and losses from expiry, improving gross margin per machine (same sales, lower cost base)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+        
+                </div>
+
+                
+
+                <!-- Revenue Target -->
+                <div class="bg-gradient-to-br from-teal/10 to-primary-red/10 rounded-2xl p-8 border-2 border-teal/30">
+                    <h4 class="text-xl font-bold text-text-primary mb-6 text-center">Our Revenue Target (In 2026)</h4>
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <!-- Revenue Distribution Chart -->
+                        <div class="bg-white rounded-xl p-8 shadow-lg">
+                            <h5 class="text-lg font-bold text-text-primary mb-6 flex items-center justify-center">
+                                <svg class="w-6 h-6 text-teal mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"/>
+                                </svg>
+                                Revenue Distribution
+                            </h5>
+                            <div class="flex justify-center items-center">
+                                <div style="width: 280px; height: 280px;">
+                                    <canvas id="revenueChart"></canvas>
+                                </div>
+                            </div>
+                            <div class="mt-6 space-y-2">
+                                <div class="flex items-center justify-between text-sm">
+                                    <div class="flex items-center">
+                                        <div class="w-4 h-4 rounded-full mr-2" style="background-color: #5CBDB9;"></div>
+                                        <span class="text-text-secondary">Medication Sales</span>
+                                    </div>
+                                    <span class="font-semibold text-text-primary">46.2%</span>
+                                </div>
+                                <div class="flex items-center justify-between text-sm">
+                                    <div class="flex items-center">
+                                        <div class="w-4 h-4 rounded-full mr-2" style="background-color: #7ECCC8;"></div>
+                                        <span class="text-text-secondary">Tele-Pharmacy Consultation</span>
+                                    </div>
+                                    <span class="font-semibold text-text-primary">30.8%</span>
+                                </div>
+                                <div class="flex items-center justify-between text-sm">
+                                    <div class="flex items-center">
+                                        <div class="w-4 h-4 rounded-full mr-2" style="background-color: #A1DDD9;"></div>
+                                        <span class="text-text-secondary">Value-Added Bundles</span>
+                                    </div>
+                                    <span class="font-semibold text-text-primary">23.1%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-text-secondary text-lg leading-relaxed">
+                                Our revenue targets are designed to achieve a more balanced mix across our product and service offerings. This positions VendoPharmacy to scale towards a revenue profile more comparable to established retail pharmacy chains.
+                            </p>
+                            <div class="mt-6 space-y-3">
+                                <div class="flex items-center">
+                                    <div class="w-4 h-4 bg-teal rounded mr-3"></div>
+                                    <span class="text-text-secondary"><strong>Medication Sales:</strong> 46.2% (~S$462,000)</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-4 h-4 rounded mr-3" style="background-color: #7ECCC8;"></div>
+                                    <span class="text-text-secondary"><strong>Tele-pharmacy:</strong> 30.8% (~S$308,000)</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-4 h-4 rounded mr-3" style="background-color: #A1DDD9;"></div>
+                                    <span class="text-text-secondary"><strong>Bundles & Upselling:</strong> 23.1% (~S$231,000)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Growth Plan Section -->
+    <!-- Timeline Section -->
+    <section id="growth" class="py-16 bg-white">
+        <div class="w-full px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-text-primary mb-4">Future Growth Plans</h2>
+                <p class="text-lg text-text-secondary">How will the business evolve in the future?</p>
+            </div>
+
+            <div class="max-w-7xl mx-auto">
+                <!-- Horizontal Timeline -->
+                <div class="relative mb-12">
+                    <!-- Timeline Line -->
+                    <div class="absolute top-8 left-0 right-0 h-1 bg-teal hidden md:block"></div>
+                    
+                    <!-- Timeline Circles -->
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+                        <!-- Circle 1 -->
+                        <div class="flex flex-col items-center">
+                            <div class="w-16 h-16 bg-teal rounded-full flex items-center justify-center text-white font-bold text-2xl shadow-xl z-10 border-4 border-white mb-6">
+                                1
+                            </div>
+                        </div>
+                        <!-- Circle 2 -->
+                        <div class="flex flex-col items-center">
+                            <div class="w-16 h-16 bg-teal rounded-full flex items-center justify-center text-white font-bold text-2xl shadow-xl z-10 border-4 border-white mb-6">
+                                2
+                            </div>
+                        </div>
+                        <!-- Circle 3 -->
+                        <div class="flex flex-col items-center">
+                            <div class="w-16 h-16 bg-teal rounded-full flex items-center justify-center text-white font-bold text-2xl shadow-xl z-10 border-4 border-white mb-6">
+                                3
+                            </div>
+                        </div>
+                        <!-- Circle 4 -->
+                        <div class="flex flex-col items-center">
+                            <div class="w-16 h-16 bg-teal rounded-full flex items-center justify-center text-white font-bold text-2xl shadow-xl z-10 border-4 border-white mb-6">
+                                4
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                    <!-- Card 1: Expanding Our Services -->
+                    <div class="bg-green-100 rounded-lg p-6 shadow-md border-2 border-green-200">
+                        <h3 class="text-xl font-bold text-text-primary text-center mb-4">Expanding Our Services</h3>
+                        <div class="text-sm text-text-secondary space-y-3">
+                            <p class="font-semibold text-text-primary">More than just medication collection.</p>
+                            <ul class="list-disc ml-4 space-y-2">
+                                <li>In the future, we plan to introduce simple community health support features such as blood pressure monitoring kiosks, basic wellness checks, and seasonal health campaigns. These services are designed to help you stay on top of your health in a convenient and accessible way.</li>
+                                <li>We're also working with healthcare institutions to make repeat prescription collection even smoother, helping patients stay consistent with their medications and avoid missed refills.</li>
+                                <li>For travellers, we aim to expand our travel health offerings with more destination-specific kits and easy-to-understand health guidance - so you can travel prepared and with peace of mind.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Smarter, Safer Technology -->
+                    <div class="bg-green-100 rounded-lg p-6 shadow-md border-2 border-green-200">
+                        <h3 class="text-xl font-bold text-text-primary text-center mb-4">Smarter, Safer Technology</h3>
+                        <div class="text-sm text-text-secondary space-y-3">
+                            <p class="font-semibold text-text-primary">Technology that supports - not replaces - care.</p>
+                            <ul class="list-disc ml-4 space-y-2">
+                                <li>We're continuously improving VendAI to provide clearer guidance when selecting medications. This means better prompts, clearer safety alerts, and stronger encouragement to speak to a pharmacist when needed.</li>
+                                <li>Behind the scenes, we're strengthening our systems to reduce downtime, so machines remain reliable and available when you need them.</li>
+                                <li>We're also enhancing secure data handling and prescription traceability to ensure your information remains protected and responsibly managed at all times.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Growing Our Network -->
+                    <div class="bg-green-100 rounded-lg p-6 shadow-md border-2 border-green-200">
+                        <h3 class="text-xl font-bold text-text-primary text-center mb-4">Growing Our Network</h3>
+                        <div class="text-sm text-text-secondary space-y-3">
+                            <p class="font-semibold text-text-primary">Bringing convenience closer to you.</p>
+                            <ul class="list-disc ml-4 space-y-2">
+                                <li>We plan to work with more polyclinics, GP clinics, and hospitals to make prescription collection more accessible across Singapore. This means more locations where you can collect your medications easily and securely.</li>
+                                <li>At the same time, we're strengthening partnerships with trusted suppliers to maintain stable medication supply and fair pricing.</li>
+                                <li>As we expand, we will roll out machines strategically in high demand areas such as education compounds, transport hubs and near hospitals so help is always within reach.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Sustainable & Responsible Growth -->
+                    <div class="bg-green-100 rounded-lg p-6 shadow-md border-2 border-green-200">
+                        <h3 class="text-xl font-bold text-text-primary text-center mb-4">Sustainable & Responsible Growth</h3>
+                        <div class="text-sm text-text-secondary space-y-3">
+                            <p class="font-semibold text-text-primary">Caring for your health - and the environment.</p>
+                            <ul class="list-disc ml-4 space-y-2">
+                                <li>We are committed to reducing medication wastage by improving demand forecasting and ensuring medicines are dispensed within safe usage timelines. Where needed, we work with partners to safely dispose of unsuitable or near-expiry stock in a compliant manner.</li>
+                                <li>Our expansion will also focus on clustered deployment and optimised refill routes to reduce unnecessary transport. Combined with energy-efficient machines, this helps lower our overall environmental footprint while keeping services reliable.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Target -->
+    <section class="py-16 bg-bg-main">
+        <div class="w-full px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-text-primary mb-4">Target</h2>
+            </div>
+
+            <div class="max-w-5xl mx-auto bg-white rounded-2xl p-8 shadow-lg">
+                <div class="prose max-w-none">
+                    <p class="text-lg text-text-secondary leading-relaxed">
+                        As we grow, our focus remains on making healthcare more accessible, reliable, and sustainable for everyone. To show our commitment to these future improvements, we will track performance using clear targets: <span class="font-semibold text-primary-red">≥20% referral action</span> from abnormal wellness readings, a <span class="font-semibold text-primary-red">≥25% reduction in missed medication pickups</span> through locker collection and reminders, and <span class="font-semibold text-primary-red">≥95% machine uptime</span> to keep services dependable. As we scale responsibly, we also commit to reducing waste and environmental impact with <span class="font-semibold text-primary-red">≥30% lower expiry losses and ≥20% lower energy usage per machine</span>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Call to Action -->
+    <section class="relative py-20 bg-gradient-to-br from-teal/10 via-white to-primary-red/5 overflow-hidden">
+        <!-- Decorative elements -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-teal/30 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-primary-red/20 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <div class="mb-8">
+                <div class="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-teal/30 rounded-full px-6 py-2.5 shadow-lg mb-6">
+                    <svg class="w-5 h-5 text-teal" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span class="text-text-primary font-semibold text-sm">Healthcare Doesn't Stop. Neither Do We.</span>
+                </div>
+                
+                <h2 class="text-4xl sm:text-5xl font-bold text-text-primary mb-6 leading-tight">
+                    Join Us in Transforming <br class="hidden sm:block"/>
+                    <span class="bg-gradient-to-r from-teal to-primary-red bg-clip-text text-transparent">Healthcare Access</span>
+                </h2>
+                
+                <p class="text-xl text-text-secondary leading-relaxed max-w-3xl mx-auto mb-10">
+                    Experience safe, smart, and accessible pharmacy care anytime, anywhere through our pharmacy vending machines.
+                </p>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="vending-machine.html" 
+                   class="group relative inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-primary-red to-hover-red text-white rounded-xl font-bold text-lg shadow-xl shadow-primary-red/30 hover:shadow-2xl hover:shadow-primary-red/40 transition-all duration-300 transform hover:-translate-y-1">
+                    <span class="absolute inset-0 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left rounded-xl"></span>
+                    <svg class="w-6 h-6 mr-3 relative z-10" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/>
+                    </svg>
+                    <span class="relative z-10">Explore Our Products</span>
+                    <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform relative z-10" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                </a>
+                
+                <a href="business-model.html" 
+                   class="group inline-flex items-center justify-center px-8 py-4 bg-white/80 backdrop-blur-sm border-2 border-teal text-teal rounded-xl font-bold text-lg hover:bg-teal hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                    <span>Explore Our Business Model</span>
+                    <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-text-primary text-white py-8">
+        <div class="w-full px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Vendo Pharmacy</h3>
+                    <p class="text-gray-300">
+                        Modernising pharmacy access through automated vending and tele-pharmacy services.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="introduction.html" class="text-gray-300 hover:text-teal">Introduction</a></li>
+                        <li><a href="business-model.html" class="text-gray-300 hover:text-teal">Business Model</a></li>
+                        <li><a href="swot.html" class="text-gray-300 hover:text-teal">SWOT Analysis</a></li>
+                        <li><a href="marketing.html" class="text-gray-300 hover:text-teal">Marketing Plan</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact</h3>
+                    <p class="text-gray-300">
+                        Email: info@vendopharmacy.sg<br>
+                        Phone: +65 6XXX XXXX<br>
+                        24/7 Support Available
+                    </p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 Vendo Pharmacy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AI Chat Widget -->
+    <div class="fixed bottom-4 left-4 z-50">
+        <button id="chat-button" class="bg-teal hover:bg-teal/90 text-white rounded-full p-4 shadow-lg flex items-center justify-center">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd"/>
+            </svg>
+        </button>
+        
+        <div id="chat-widget" class="hidden absolute bottom-16 left-0 bg-white rounded-xl shadow-2xl w-80 overflow-hidden">
+            <div class="bg-teal text-white p-4 flex justify-between items-center">
+                <div class="flex items-center">
+                    <div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center mr-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <span class="font-semibold">VendoBot Assistant</span>
+                </div>
+                <button id="chat-close" class="hover:bg-white/20 rounded p-1">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+            </div>
+            <div id="chat-messages" class="h-64 overflow-y-auto p-4 bg-gray-50 custom-scrollbar">
+            </div>
+            <div class="p-4 border-t">
+                <div class="flex space-x-2">
+                    <input 
+                        id="chat-input" 
+                        type="text" 
+                        placeholder="Type your question..." 
+                        class="flex-1 px-3 py-2 border border-border-gray rounded-lg focus:outline-none focus:ring-2 focus:ring-teal"
+                    />
+                    <button id="chat-send" class="bg-teal hover:bg-teal/90 text-white px-4 py-2 rounded-lg">
+                        Send
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/chatbot.js"></script>
+    <script src="../js/chart-config.js"></script>
+</body>
+</html>
